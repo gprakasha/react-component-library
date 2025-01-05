@@ -56,9 +56,23 @@ export default function NewsLetter(props: Readonly<NewsLetterProps>) {
 		}
 	};
 
+	const validateEmail = (email: string): void => {
+		if (!email) {
+			setInvalidError("Email is required");
+			return;
+		}
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(email)) {
+			setEmailValidationError();
+		} else {
+			setInvalidError("");
+		}
+	}
+
 	const handleEmailInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
 		setEmail(e.target.value);
 		setInvalidError("");
+		validateEmail(e.target.value);
 		setSubscribedMessage("");
 	};
 
@@ -83,7 +97,7 @@ export default function NewsLetter(props: Readonly<NewsLetterProps>) {
 					placeholder={props.inputBoxPlaceholder}
 				/>
 				<SubscribeButton
-					disabled={!isConsentChecked}
+					disabled={!isConsentChecked || !!invalidError}
 					type="submit"
 					className="px-3 border-rounded rounded-3 btn btn-primary"
 				>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import UserProfile from "../userProfile/UserProfile";
 import { SideBarContainerProps, SidebarProps } from "./sidebar.types";
-import { HamburgerIcon } from "../hamburgerButton/HamburgerButton";
+import { HamburgerButton } from "../hamburger-button/HamburgerButton";
 
 const SideBarContainer = styled.div<SideBarContainerProps>`
 	display: flex;
@@ -97,7 +97,7 @@ export default function Sidebar({
 			{isOpen && <BackDrop onClick={close}></BackDrop>}
 			<SideBarContainer isOpen={isOpen} sidebarPosition={sidebarPosition} style={sideBarContainerStyleTemp}>
 				<div className="ms-auto">
-					<HamburgerIcon isOpen={isOpen} toggleSidebar={close} />
+					<HamburgerButton isOpen={isOpen} toggleSidebar={close} />
 				</div>
 				<UserProfile {...userProfileProps}></UserProfile>
 				{navItems && navItems.length > 0 && (

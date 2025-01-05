@@ -1,8 +1,7 @@
-// Variable overrides first
-$primary: #900;
+@import "./token";
+
 $font-size-base: 0.75rem;
 $enable-shadows: true;
-$prefix: "mo-";
 
 // Then import Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";

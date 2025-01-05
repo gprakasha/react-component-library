@@ -1,0 +1,94 @@
+{/* AvatarDocs.mdx */}
+
+import { Avatar } from './Avatar';
+
+# Avatar
+
+The Avatar component is used to represent a user or entity. It can be used to display a user's profile picture, initials, or a placeholder image as a fallback.
+
+## Usage
+
+```jsx
+    <Avatar src="https://example.com/avatar.jpg" alt="User's avatar" />
+```
+
+## Props
+
+- logo => string
+- name (required) => string
+- size => string
+- styleClass => string
+
+
+
+
+## Examples
+
+### Small Avatar
+
+```jsx
+    <Avatar src="https://example.com/avatar.jpg" alt="User's avatar" size="small" />
+```
+
+### Large Rounded Avatar
+
+```jsx
+    <Avatar src="https://example.com/avatar.jpg" alt="User's avatar" size="large" />
+```
+
+### Avatar with Custom Class
+
+```jsx
+    <Avatar src="https://example.com/avatar.jpg" alt="User's avatar" className="custom-class" />
+```
+
+### Avatar with Initials
+
+```jsx
+    <Avatar initials="JD" alt="User's avatar" />
+```
+
+### Avatar with Placeholder Image
+
+```jsx
+    <Avatar alt="User's avatar" />
+```
+
+### Avatar with Custom Size
+
+```jsx
+    <Avatar src="https://example.com/avatar.jpg" alt="User's avatar" size="96px" />
+```
+
+### Avatar with Custom Styles
+
+```jsx
+    <Avatar src="https://example.com/avatar.jpg" alt="User's avatar" style={{ border: '2px solid red' }} />
+```
+
+### Avatar with Custom Image
+
+```jsx
+    <Avatar src={customImage} alt="User's avatar" />
+```
+
+### Avatar with Custom Image Component
+
+```jsx
+    <Avatar src={<CustomImage />} alt="User's avatar" />
+```
+
+### Avatar with Custom Image Element
+
+```jsx
+    <Avatar src={<img src="https://example.com/avatar.jpg" alt="User's avatar" />} alt="User's avatar" />
+```
+
+### Avatar with Custom Image Element and Alt Text
+
+```jsx
+    <Avatar src={<img src="https://example.com/avatar.jpg" alt="User's avatar" />} alt="User's avatar" />
+```
+
+{/* AvatarDocs.mdx */}
+```

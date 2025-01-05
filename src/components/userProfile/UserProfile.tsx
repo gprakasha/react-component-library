@@ -1,7 +1,7 @@
 import React from "react";
 import { UserProfileProps } from "./userProfile.types";
 import styled from "styled-components";
-import Avatar from "../avatar/Avatar";
+import { Avatar } from "../avatar/Avatar";
 
 const UserDetails = styled.div`
 	display: flex;
@@ -12,7 +12,6 @@ const UserDetails = styled.div`
 
 const UserContainer = styled.div`
 	display: flex;
-	margin-top: 10px;
 	gap: 10px;
 `;
 
